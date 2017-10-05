@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<JFXDialogLayout maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.control.FXMLPropiedadesSubController">
+   <children>
+      <Accordion prefHeight="390.0" prefWidth="292.0">
+         <panes>
+            <TitledPane animated="false" text="Eliminar Panel de Suscripcion" textFill="#a15b5b">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="26.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btnBorrarPanel" layoutX="25.0" layoutY="72.0" onAction="#eliminarPanelSup" prefHeight="56.0" prefWidth="150.0" text="Eliminar Panel">
+                                 <graphic>
+                                    <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Img/boton-cancelar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label layoutX="4.0" prefHeight="36.0" prefWidth="192.0" text="Esta opcion sera habilitada cuando" />
+                              <Label layoutX="4.0" layoutY="36.0" text=" el panel no tenga colaboradores" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Administrar filtros" textFill="#da2a2a">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXComboBox fx:id="comboxFiltro" layoutX="14.0" layoutY="47.0" prefHeight="25.0" prefWidth="223.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Lista filtros:" textFill="#da1414">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="122.0" layoutY="233.0" onAction="#eliminarFiltro" prefHeight="37.0" prefWidth="122.0" text="Eliminar">
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Img/boton-cancelar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Añadir palabras al filtro" textFill="#276fd3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtPalabraNew" layoutX="11.0" layoutY="67.0" prefHeight="25.0" prefWidth="229.0" />
+                        <JFXButton layoutX="115.0" layoutY="233.0" onAction="#agregarFiltro" prefHeight="37.0" prefWidth="122.0" text="Agregar" />
+                        <Label layoutX="14.0" layoutY="29.0" text="Añade palabra al filtro:" textFill="#972d2d">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Administrar colaboradores" textFill="#15a419">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="287.0" prefWidth="253.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Agregar">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tablaColaboradores1" layoutX="27.0" prefHeight="218.0" prefWidth="200.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="Foto" />
+                                                <TableColumn fx:id="cNombre1" prefWidth="124.0" text="Nombre" />
+                                             </columns>
+                                          </TableView>
+                                          <JFXButton fx:id="btnAgregar" layoutX="142.0" layoutY="218.0" onAction="#agregarColaborador" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #D3CC48;" text="Agregar" textFill="WHITE" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Eliminar">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="192.0">
+                                       <children>
+                                          <TableView fx:id="tablaColaboradores" layoutX="27.0" prefHeight="218.0" prefWidth="200.0">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="Foto" />
+                                                <TableColumn fx:id="cNombre" prefWidth="124.0" text="Nombre" />
+                                             </columns>
+                                          </TableView>
+                                          <JFXButton layoutX="127.0" layoutY="218.0" onAction="#eliminarColaborador" prefHeight="37.0" prefWidth="122.0" text="Eliminar">
+                                             <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Img/boton-cancelar.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="309.0" prefWidth="253.0" text="Consultar Mensaje" textFill="#38a126">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtMensajeC" layoutX="27.0" layoutY="245.0" prefHeight="25.0" prefWidth="149.0" promptText="Buscar por Autor o mensaje" />
+                        <JFXButton layoutX="185.0" layoutY="235.0" onAction="#buscarMensaje" prefHeight="50.0" prefWidth="46.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Img/lupa-para-buscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <TableView fx:id="tablaMensajes" layoutX="26.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="cAutor" prefWidth="62.0" text="Autor" />
+                              <TableColumn fx:id="cMensaje" prefWidth="137.0" text="Mensaje" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</JFXDialogLayout>

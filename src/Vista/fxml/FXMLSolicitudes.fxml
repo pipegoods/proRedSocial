@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<JFXDialogLayout maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.control.FXMLSolicitudesController">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+            <TableView fx:id="tablaSolicitudes" prefHeight="481.0" prefWidth="253.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Foto" />
+                <TableColumn fx:id="cNomnre" prefWidth="177.0" text="Nombre" />
+              </columns>
+            </TableView>
+                <FlowPane alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="200.0" rowValignment="TOP" snapToPixel="false">
+                    <children>
+                        <JFXButton fx:id="btnAgregar" onAction="#agregar" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #D3CC48;" text="Agregar" textFill="WHITE" />
+                        <JFXButton fx:id="btnRechazar" onAction="#rechazar" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #e74b4b;" text="Rechazar" textFill="WHITE" />
+                    </children>
+                </FlowPane>
+            </children>
+        </VBox>
+    </children>
+</JFXDialogLayout>

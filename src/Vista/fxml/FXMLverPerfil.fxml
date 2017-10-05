@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<JFXDialogLayout maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.control.FXMLverPerfilController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="nPerfil" layoutX="125.0" layoutY="14.0" prefHeight="37.0" prefWidth="174.0" text="Nombre del Perfil xD">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="124.0" text="Deja tu mensaje">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="boxMensaje" editable="false" layoutX="8.0" layoutY="152.0" prefHeight="201.0" prefWidth="285.0" style="-fx-border-color: #4059a9;" unFocusColor="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextArea>
+            <JFXTextField fx:id="mensaje" layoutX="43.0" layoutY="360.0" prefHeight="27.0" prefWidth="194.0" promptText="escribe tu mensaje..." style="-fx-border-color: #ccf235;" unFocusColor="WHITE" />
+            <JFXButton fx:id="enviar" buttonType="RAISED" layoutX="244.0" layoutY="361.0" onAction="#enviarMensaje" prefHeight="25.0" prefWidth="49.0" ripplerFill="BLACK" style="-fx-background-color: #ccf235;" text="Enviar" />
+            <Label layoutX="115.0" layoutY="54.0" prefHeight="27.0" prefWidth="114.0" text="Temas de interes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="num" focusColor="BLACK" layoutX="8.0" layoutY="360.0" prefHeight="27.0" prefWidth="27.0" promptText="#" style="-fx-border-color: #ccf235;" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="temasInteres" layoutX="117.0" layoutY="81.0" prefHeight="25.0" prefWidth="174.0" style="-fx-border-color: #ccf235;" unFocusColor="WHITE" />
+            <Pane fx:id="paneIImg" layoutX="1.0" layoutY="1.0" prefHeight="124.0" prefWidth="114.0">
+               <children>
+                  <ImageView fx:id="img" fitHeight="147.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/mrx.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</JFXDialogLayout>

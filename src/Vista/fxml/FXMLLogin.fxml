@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="ventanaLogin" dividerPositions="0.8669724770642202" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.control.FXMLLoginController">
+    <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="338.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/logoUDC.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="243.0" layoutY="180.0" prefHeight="250.0" prefWidth="340.0">
+               <children>
+                  <JFXTextField fx:id="jUsuario" focusColor="#003fff" labelFloat="true" maxWidth="347.0" minWidth="300.0" prefHeight="63.0" prefWidth="347.0" promptText="Nombre Cuenta">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="30.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="jContrasena" focusColor="#003fff" labelFloat="true" maxWidth="348.0" minWidth="300.0" prefHeight="43.0" prefWidth="348.0" promptText="Contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#checkin" prefHeight="41.0" prefWidth="134.0" style="-fx-border-style: solid inside; -fx-border-color: #4059a9; -fx-background-radius: 5; -fx-background-color: #FFFFFF;" text="Ingresar">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView blendMode="RED" fitHeight="64.0" fitWidth="125.0" layoutX="685.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Img/arrow_right.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="494.0" layoutY="493.0" text="Arrastra para registrarte" textFill="#0bd8ee">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="22.0" layoutY="474.0" onAction="#informacionProyecto" prefHeight="64.0" prefWidth="0.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/help-round-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="22.0" layoutY="14.0" onAction="#cerrarPrograma" prefHeight="64.0" prefWidth="0.0">
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/boton-cancelar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox layoutX="95.0" layoutY="28.0" prefHeight="496.0" prefWidth="400.0">
+               <children>
+                  <JFXTextField fx:id="jNombreCuenta" labelFloat="true" maxWidth="400.0" minWidth="400.0" prefHeight="33.0" prefWidth="400.0" promptText="Nombre Cuenta">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="jIdentificador" labelFloat="true" maxWidth="400.0" minWidth="400.0" prefHeight="35.0" prefWidth="400.0" promptText="Identificador">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="jContrasenaR" labelFloat="true" maxWidth="400.0" minWidth="400.0" prefHeight="25.0" prefWidth="400.0" promptText="Contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="jContrasenaR2" labelFloat="true" maxWidth="400.0" minWidth="400.0" onKeyReleased="#validarCon" prefHeight="18.0" prefWidth="400.0" promptText="Confirmar Contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <Label fx:id="labelConfirm" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="167.0" translateX="230.0" translateY="-10.0" />
+                  <HBox alignment="CENTER" prefHeight="182.0" prefWidth="400.0">
+                     <children>
+                        <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/mrx.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton onAction="#buscarFoto" prefHeight="46.0" prefWidth="145.0" style="-fx-border-style: solid; -fx-border-color: #003fff;" text="Cambiar Foto">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="registerBtn" alignment="BOTTOM_LEFT" contentDisplay="CENTER" onAction="#register" style="-fx-border-style: solid; -fx-border-color: #003fff;" text="Registrarse">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

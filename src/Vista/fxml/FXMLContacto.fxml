@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.control.FXMLContactoController">
+   <children>
+      <SplitPane dividerPositions="0.6263736263736264" prefHeight="448.0" prefWidth="639.0">
+         <items>
+            <StackPane fx:id="pane" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="446.0" prefWidth="494.0">
+                     <children>
+                        <ScrollPane layoutX="9.0" layoutY="39.0" prefHeight="356.0" prefWidth="369.0">
+                           <content>
+                              <TableView fx:id="tablaContactos" prefHeight="350.0" prefWidth="367.0">
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <columns>
+                                    <TableColumn fx:id="columFoto" prefWidth="75.0" text="Foto" />
+                                    <TableColumn fx:id="columNombre" prefWidth="291.0" text="Nombre" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <JFXTextField fx:id="txtBuscar" layoutX="10.0" layoutY="410.0" prefHeight="25.0" prefWidth="205.0" promptText="Busca un contacto" />
+                        <JFXButton layoutX="323.0" layoutY="410.0" onAction="#eliminarContacto" style="-fx-background-color: #8D0000;" text="Eliminar" textFill="WHITE" />
+                        <Label alignment="TOP_CENTER" layoutX="19.0" layoutY="3.0" prefHeight="39.0" prefWidth="261.0" text="Tus Contactos" textFill="#66c3da">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="217.0" layoutY="404.0" onAction="#consultarContacto" prefHeight="39.0" prefWidth="52.0">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Img/lupa-para-buscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="276.0" layoutY="8.0" onAction="#verPerfi" prefHeight="25.0" prefWidth="94.0" text="Ver perfil">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Img/lupa-para-buscar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="446.0" prefWidth="320.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="212.0" text="Agregar Contactos" textFill="#2591dd">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtBuscarContacto" focusColor="#365ed7" layoutX="14.0" layoutY="67.0" prefHeight="25.0" prefWidth="157.0" unFocusColor="#72828d" />
+                  <JFXDrawer fx:id="tablaBusqueda" layoutX="14.0" layoutY="114.0" prefHeight="262.0" prefWidth="212.0">
+                     <children>
+                        <TableView fx:id="tablaPerfiles" prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="cFoto" prefWidth="75.0" text="Foto" />
+                              <TableColumn fx:id="cNombre" prefWidth="136.0" text="Nombre" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </JFXDrawer>
+                  <JFXButton layoutX="165.0" layoutY="407.0" onAction="#agregarPerfil" style="-fx-background-color: #D3CC48;" text="Agregar" textFill="WHITE" />
+                  <JFXButton layoutX="174.0" layoutY="60.0" onAction="#buscarPerfil" prefHeight="39.0" prefWidth="52.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/lupa-para-buscar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>
